@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:onClick="fecharTeclado"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="385dp"
+        android:layout_height="372dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="15dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="369dp"
+            android:background="#A3000000"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:freezesText="true"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtHintEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alwaysDrawnWithCache="false"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                app:hintTextColor="#FFFFFF"
+                app:startIconDrawable="@android:drawable/sym_action_email"
+                tools:layout_conversion_absoluteHeight="56dp"
+                tools:layout_conversion_absoluteWidth="341dp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="260dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00408701"
+                    android:hint="E-mail"
+                    android:textColorHint="#FFFFFF"
+                    tools:layout_conversion_absoluteHeight="56dp"
+                    tools:layout_conversion_absoluteWidth="341dp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="260dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                app:endIconDrawable="@android:drawable/ic_menu_view"
+                app:hintTextColor="#FFFFFF"
+                app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                tools:layout_conversion_absoluteHeight="66dp"
+                tools:layout_conversion_absoluteWidth="341dp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="316dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:drawableEnd="@android:drawable/ic_menu_view"
+                    android:hint="Senha"
+                    android:password="true"
+                    android:textColorHint="#FFFFFF"
+                    tools:layout_conversion_absoluteHeight="66dp"
+                    tools:layout_conversion_absoluteWidth="341dp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="316dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Switch
+                android:id="@+id/checkLogado"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:checked="true"
+                android:text="Manter logado"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#00FFFFFF"
+                android:textColorLink="#00D81616"
+                android:textOff="Não"
+                android:textOn="Sim" />
+
+            <Button
+                android:id="@+id/btnEntrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#630B3F4F"
+                android:includeFontPadding="false"
+                android:onClick="entrar"
+                android:soundEffectsEnabled="true"
+                android:text="Entrar"
+                android:textColorHint="#FFFFFF"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="93dp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="411dp" />
+
+            <CheckBox
+                android:id="@+id/checkTermos"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="Termos de uso."
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkPolitica"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="Politícas de privacidade"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@android:drawable/stat_sys_warning"
+                android:text="Esqueceu a senha?"
+                android:textAlignment="textEnd"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:layout_conversion_absoluteHeight="24dp"
+                tools:layout_conversion_absoluteWidth="341dp"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="459dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
